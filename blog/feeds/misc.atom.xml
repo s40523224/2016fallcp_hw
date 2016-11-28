@@ -142,14 +142,12 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
     # 水平線
     for i in range(ynum+1):
         ctx.beginPath()
-    # 設定線的寬度為 1 個單位
         if i == 0:
             ctx.lineWidth = 7
         else:
             ctx.lineWidth = 1
         ctx.moveTo(x-1, y+i*yinc)
         ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
-        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
         ctx.strokeStyle = "blue"
         ctx.stroke()
         ctx.closePath()
@@ -157,42 +155,13 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
     # 垂直線
     for i in range(xnum+1):
         ctx.beginPath()
-    # 設定線的寬度為 1 個單位
         ctx.lineWidth = 1
         ctx.moveTo(x+i*xinc, y)
         ctx.lineTo(x+i*xinc, y+ynum*yinc)
-        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
         ctx.strokeStyle = "blue"
         ctx.stroke()
         ctx.closePath()
     ctx.closePath()
-
-background(10, 60, 20, 25, 5, 4, ctx)
-background(150, 60, 20, 25, 5, 4, ctx)
-background(290, 60, 20, 25, 5, 4, ctx)
-background(10, 260, 20, 25, 5, 4, ctx)
-background(150, 260, 20, 25, 5, 4, ctx)
-background(290, 260, 20, 25, 5, 4, ctx)
-#background(0, 0, 25, 25, 39, 149, ctx)
-
-#定義文字(x,y座標,字)
-def text(x,y,t,ctx):
-    ctx.beginPath()
-    ctx.fillStyle = 'black'
-    ctx.strokeStyle = "black"
-    ctx.font = "25px Arial"
-    ctx.fillText(t, x, y)
-    ctx.fill()
-    ctx.stroke()
-    ctx.closePath()
-
-text(15,25,"A Major ",ctx)
-text(155,25,"C Major ",ctx)
-text(295,25,"G Major ",ctx)
-text(15,225,"D Major ",ctx)
-text(155,225,"E Major ",ctx)
-text(300,225,"C Maj7 ",ctx)
-
 # 指法(x,y座標,指法)
 def finger(x,y,nu):
     ctx.beginPath()
@@ -209,7 +178,6 @@ def finger(x,y,nu):
     ctx.fill()
     ctx.stroke()
     ctx.closePath()
-
 #定義XO
 def ooo(xo,yo):
     ctx.beginPath()
@@ -228,7 +196,29 @@ def xxx(xx,yx):
    ctx.strokeStyle = "black"
    ctx.stroke()
    ctx.closePath()
-
+#定義文字(x,y座標,字)
+def text(x,y,t,ctx):
+    ctx.beginPath()
+    ctx.fillStyle = 'black'
+    ctx.strokeStyle = "black"
+    ctx.font = "25px Arial"
+    ctx.fillText(t, x, y)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+background(10, 60, 20, 25, 5, 4, ctx)
+background(150, 60, 20, 25, 5, 4, ctx)
+background(290, 60, 20, 25, 5, 4, ctx)
+background(10, 260, 20, 25, 5, 4, ctx)
+background(150, 260, 20, 25, 5, 4, ctx)
+background(290, 260, 20, 25, 5, 4, ctx)
+#background(0, 0, 25, 25, 39, 149, ctx)
+text(15,25,"A Major ",ctx)
+text(155,25,"C Major ",ctx)
+text(295,25,"G Major ",ctx)
+text(15,225,"D Major ",ctx)
+text(155,225,"E Major ",ctx)
+text(300,225,"C Maj7 ",ctx)
 #A major指法
 finger(50,98,"1")    
 finger(70,98,"2")  
@@ -259,19 +249,26 @@ xxx(30,248)
 ooo(50,248)
 #E major指法
 finger(211,274,"1")    
-finger(170,298,"2")  
+finger(169,298,"2")  
 finger(190,298,"3") 
+xxx(150,248)
+ooo(230,248)
+ooo(250,248)
 #C maj7指法
 finger(330,298,"1")    
 finger(310,323,"2")  
-
-
+xxx(290,248)
+ooo(350,248)
+ooo(370,248)
+ooo(390,248)
 
 &lt;/script&gt;
 
 &lt;pre class="brush: python"&gt;
 &lt;!-- 以下實際利用  Brython 畫圖 --&gt;
+
 &lt;canvas id="chord1" width="600" height="400"&gt;&lt;/canvas&gt;
+
 &lt;script type="text/python3"&gt;
 from browser import document as doc
 import math
@@ -283,14 +280,12 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
     # 水平線
     for i in range(ynum+1):
         ctx.beginPath()
-    # 設定線的寬度為 1 個單位
         if i == 0:
             ctx.lineWidth = 7
         else:
             ctx.lineWidth = 1
         ctx.moveTo(x-1, y+i*yinc)
         ctx.lineTo(x+xnum*xinc+1, y+i*yinc)
-        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
         ctx.strokeStyle = "blue"
         ctx.stroke()
         ctx.closePath()
@@ -298,23 +293,47 @@ def background(x, y, xinc, yinc, xnum, ynum, ctx):
     # 垂直線
     for i in range(xnum+1):
         ctx.beginPath()
-    # 設定線的寬度為 1 個單位
         ctx.lineWidth = 1
         ctx.moveTo(x+i*xinc, y)
         ctx.lineTo(x+i*xinc, y+ynum*yinc)
-        # 設定顏色為藍色, 也可以使用 "rgb(0, 0, 255)" 字串設定顏色值
         ctx.strokeStyle = "blue"
         ctx.stroke()
         ctx.closePath()
     ctx.closePath()
-
-background(10, 60, 20, 25, 5, 4, ctx)
-background(150, 60, 20, 25, 5, 4, ctx)
-background(290, 60, 20, 25, 5, 4, ctx)
-background(10, 260, 20, 25, 5, 4, ctx)
-background(150, 260, 20, 25, 5, 4, ctx)
-background(290, 260, 20, 25, 5, 4, ctx)
-
+# 指法(x,y座標,指法)
+def finger(x,y,nu):
+    ctx.beginPath()
+    ctx.fillStyle = 'black'
+    ctx.strokeStyle = "black"
+    ctx.arc(x, y, 9, 0, 2*math.pi, False)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+    ctx.beginPath()
+    ctx.fillStyle = 'white'
+    ctx.font = "16px Arial"
+    ctx.fillText(nu, x-4.5, y+5.5)
+    ctx.fill()
+    ctx.stroke()
+    ctx.closePath()
+#定義XO
+def ooo(xo,yo):
+    ctx.beginPath()
+    ctx.arc(xo, yo, 5, 0, 2*math.pi, False)
+    ctx.lineWidth =3
+    ctx.strokeStyle = "black"
+    ctx.stroke()
+    ctx.closePath()
+def xxx(xx,yx):
+   ctx.beginPath()
+   ctx.moveTo(xx-5, yx-5)
+   ctx.lineTo(xx+5, yx+5)
+   ctx.moveTo(xx+5, yx-5)
+   ctx.lineTo(xx-5, yx+5)
+   ctx.lineWidth =3
+   ctx.strokeStyle = "black"
+   ctx.stroke()
+   ctx.closePath()
 #定義文字(x,y座標,字)
 def text(x,y,t,ctx):
     ctx.beginPath()
@@ -325,13 +344,61 @@ def text(x,y,t,ctx):
     ctx.fill()
     ctx.stroke()
     ctx.closePath()
-
+background(10, 60, 20, 25, 5, 4, ctx)
+background(150, 60, 20, 25, 5, 4, ctx)
+background(290, 60, 20, 25, 5, 4, ctx)
+background(10, 260, 20, 25, 5, 4, ctx)
+background(150, 260, 20, 25, 5, 4, ctx)
+background(290, 260, 20, 25, 5, 4, ctx)
+#background(0, 0, 25, 25, 39, 149, ctx)
 text(15,25,"A Major ",ctx)
 text(155,25,"C Major ",ctx)
 text(295,25,"G Major ",ctx)
 text(15,225,"D Major ",ctx)
 text(155,225,"E Major ",ctx)
 text(300,225,"C Maj7 ",ctx)
+#A major指法
+finger(50,98,"1")    
+finger(70,98,"2")  
+finger(90,98,"3")  
+xxx(10,48)
+ooo(30,48)
+ooo(110,48)
+#C major指法
+finger(230,74,"1")    
+finger(190,98,"2")  
+finger(170,123,"3")  
+xxx(150,48)
+ooo(210,48)
+ooo(250,48)
+#G major指法
+finger(310,98,"1")    
+finger(290,123,"2")  
+finger(370,123,"3")  
+finger(390,123,"4") 
+ooo(330,48)
+ooo(350,48)
+#D major指法
+finger(70,298,"1")    
+finger(90,323,"2")  
+finger(110,298,"3") 
+xxx(10,248)
+xxx(30,248)
+ooo(50,248)
+#E major指法
+finger(211,274,"1")    
+finger(169,298,"2")  
+finger(190,298,"3") 
+xxx(150,248)
+ooo(230,248)
+ooo(250,248)
+#C maj7指法
+finger(330,298,"1")    
+finger(310,323,"2")  
+xxx(290,248)
+ooo(350,248)
+ooo(370,248)
+ooo(390,248)
 &lt;/script&gt;
 &lt;/pre&gt;</summary><category term="使用導引"></category></entry><entry><title>W11 Brython 繪圖範例</title><link href="./w11-brython-hui-tu-fan-li.html" rel="alternate"></link><published>2016-11-21T12:00:00+08:00</published><updated>2016-11-21T12:00:00+08:00</updated><author><name>yen</name></author><id>tag:,2016-11-21:./w11-brython-hui-tu-fan-li.html</id><summary type="html">&lt;p&gt;Brython 繪圖&lt;/p&gt;
 &lt;p&gt;繪圖流程, 導入程式庫, 啟動, 然後引用各種模組開始繪圖&lt;/p&gt;
