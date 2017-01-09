@@ -59,6 +59,37 @@ document["b2"].bind("click",b2)
 &lt;/script&gt;
 
 &lt;p&gt;&lt;button id="b2"&gt;猜數字&lt;/button&gt;&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+&lt;div id="con"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import alert
+from browser import document
+from browser import html
+import random
+
+
+
+def b2(e):
+    alert("按確定")  
+    標準答案 = random.randint(1, 100)
+    你猜的數字 = int(input("請輸入您所猜的整數:"))
+    猜測次數 = 1
+
+    while 標準答案 != 你猜的數字:
+        if 標準答案 &lt; 你猜的數字:   
+            print(你猜的數字,"太大了，再猜一次 :)加油")
+            con1&lt;=str(你猜的數字)
+        else:
+            print(你猜的數字,"太小了，再猜一次 :)加油")
+        你猜的數字 = int(input("請輸入您所猜的整數:"))
+        猜測次數 += 1       
+    print("猜對了！總共猜了", 猜測次數, "次")
+document["b2"].bind("click",b2)
+
+&lt;/script&gt;
+&lt;button id="b2"&gt;猜數字&lt;/button&gt;
+&lt;/pre&gt;
+
 &lt;p&gt;W15週心得與程式範例:&lt;/p&gt;
 &lt;p&gt;Leo Editor 的節點 @edit @path @button 的用法到 pelican 轉 .md 檔案成為 blog 網誌, 並加入 Brython 程式導入與執行的方法&lt;/p&gt;
 &lt;p&gt;@settings-&amp;gt;設定節點
@@ -96,7 +127,33 @@ for i in range(5):
 do["b1"].bind("click", compa)
 &lt;/script&gt;
 
-&lt;p&gt;&lt;button id="b1"&gt;compa&lt;/button&gt;&lt;/p&gt;</summary><category term="使用導引"></category></entry><entry><title>計算機程式 W16 範例整理</title><link href="./ji-suan-ji-cheng-shi-w16-fan-li-zheng-li.html" rel="alternate"></link><published>2016-12-26T12:00:00+08:00</published><updated>2016-12-26T12:00:00+08:00</updated><author><name>40523224</name></author><id>tag:,2016-12-26:./ji-suan-ji-cheng-shi-w16-fan-li-zheng-li.html</id><summary type="html">&lt;p&gt;在機械設計工程系的計算機程式課程中, 學習 Python3 的基本目的, 希望在最短時間內, 讓學員能夠除了在身旁的電腦或筆電上, 利用 Python3 程式語法進行各種資料處理與運算外, 還希望學員能夠透過編寫網際程式, 利用網站執行協同設計程式.&lt;/p&gt;
+&lt;p&gt;&lt;button id="b1"&gt;compa&lt;/button&gt;&lt;/p&gt;
+&lt;pre class="brush: python"&gt;
+&lt;div id="con"&gt;&lt;/div&gt;
+&lt;script type="text/python3"&gt;
+from browser import document as do
+from browser import html
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
+    try:
+        if int(your_input) &gt; 10:
+            c &lt;= "所輸入的整數:" + your_input + "比 10 大" + html.BR()
+        else:
+            c &lt;= "所輸入的整數:" + your_input + "比 10 小" + html.BR()
+    except:
+        c &lt;= "請輸入整數!!" + html.BR()
+
+#print("test")
+'''
+for i in range(5):
+    c &lt;= "test" + html.BR()
+'''
+do["b1"].bind("click", compa)
+&lt;/script&gt;
+&lt;button id="b1"&gt;compa&lt;/button&gt;
+&lt;/pre&gt;</summary><category term="使用導引"></category></entry><entry><title>計算機程式 W16 範例整理</title><link href="./ji-suan-ji-cheng-shi-w16-fan-li-zheng-li.html" rel="alternate"></link><published>2016-12-26T12:00:00+08:00</published><updated>2016-12-26T12:00:00+08:00</updated><author><name>40523224</name></author><id>tag:,2016-12-26:./ji-suan-ji-cheng-shi-w16-fan-li-zheng-li.html</id><summary type="html">&lt;p&gt;在機械設計工程系的計算機程式課程中, 學習 Python3 的基本目的, 希望在最短時間內, 讓學員能夠除了在身旁的電腦或筆電上, 利用 Python3 程式語法進行各種資料處理與運算外, 還希望學員能夠透過編寫網際程式, 利用網站執行協同設計程式.&lt;/p&gt;
 
 
 &lt;!-- 導入 Brython 標準程式庫 --&gt;

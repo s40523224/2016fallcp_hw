@@ -372,6 +372,37 @@ document["b2"].bind("click",b2)
 </script>
 
 <p><button id="b2">猜數字</button></p>
+<pre class="brush: python">
+<div id="con"></div>
+<script type="text/python3">
+from browser import alert
+from browser import document
+from browser import html
+import random
+
+
+
+def b2(e):
+    alert("按確定")  
+    標準答案 = random.randint(1, 100)
+    你猜的數字 = int(input("請輸入您所猜的整數:"))
+    猜測次數 = 1
+
+    while 標準答案 != 你猜的數字:
+        if 標準答案 < 你猜的數字:   
+            print(你猜的數字,"太大了，再猜一次 :)加油")
+            con1<=str(你猜的數字)
+        else:
+            print(你猜的數字,"太小了，再猜一次 :)加油")
+        你猜的數字 = int(input("請輸入您所猜的整數:"))
+        猜測次數 += 1       
+    print("猜對了！總共猜了", 猜測次數, "次")
+document["b2"].bind("click",b2)
+
+</script>
+<button id="b2">猜數字</button>
+</pre>
+
 <p>W15週心得與程式範例:</p>
 <p>Leo Editor 的節點 @edit @path @button 的用法到 pelican 轉 .md 檔案成為 blog 網誌, 並加入 Brython 程式導入與執行的方法</p>
 <p>@settings-&gt;設定節點
@@ -410,6 +441,32 @@ do["b1"].bind("click", compa)
 </script>
 
 <p><button id="b1">compa</button></p>
+<pre class="brush: python">
+<div id="con"></div>
+<script type="text/python3">
+from browser import document as do
+from browser import html
+c = do["con"]
+def compa(e):
+    your_input = input("請輸入一個整數!")
+    # 如何判斷所輸入的整數比 10 大
+    try:
+        if int(your_input) > 10:
+            c <= "所輸入的整數:" + your_input + "比 10 大" + html.BR()
+        else:
+            c <= "所輸入的整數:" + your_input + "比 10 小" + html.BR()
+    except:
+        c <= "請輸入整數!!" + html.BR()
+
+#print("test")
+'''
+for i in range(5):
+    c <= "test" + html.BR()
+'''
+do["b1"].bind("click", compa)
+</script>
+<button id="b1">compa</button>
+</pre>
             </div>
             <!-- /.entry-content -->
         </article>
