@@ -60,6 +60,17 @@ document["b2"].bind("click",b2)
 
 &lt;p&gt;&lt;button id="b2"&gt;猜數字&lt;/button&gt;&lt;/p&gt;
 &lt;p&gt;W15週心得與程式範例:&lt;/p&gt;
+&lt;p&gt;Leo Editor 的節點 @edit @path @button 的用法到 pelican 轉 .md 檔案成為 blog 網誌, 並加入 Brython 程式導入與執行的方法&lt;/p&gt;
+&lt;p&gt;@settings-&amp;gt;設定節點
+@edit-&amp;gt;增新節點
+@button-&amp;gt;按鈕&lt;/p&gt;
+&lt;p&gt;移動節點
+ctrl+u 向上移動
+ctrl+d 向下移動
+ctrl+r 向右移動
+ctrl+l 向左移動
+ctrl+i 新增內容
+ctrl+b 執行內容&lt;/p&gt;
 &lt;div id="con"&gt;&lt;/div&gt;
 
 &lt;script type="text/python3"&gt;
