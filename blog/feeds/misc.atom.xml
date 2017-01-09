@@ -60,6 +60,15 @@ document["b2"].bind("click",b2)
 
 &lt;p&gt;&lt;button id="b2"&gt;猜數字&lt;/button&gt;&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
 &lt;div id="con"&gt;&lt;/div&gt;
 &lt;script type="text/python3"&gt;
 from browser import alert
@@ -128,6 +137,15 @@ do["b1"].bind("click", compa)
 
 &lt;p&gt;&lt;button id="b1"&gt;compa&lt;/button&gt;&lt;/p&gt;
 &lt;pre class="brush: python"&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;script type="text/javascript" src="https://cdn.rawgit.com/brython-dev/brython/master/www/src/brython_dist.js"&gt;
+&lt;/script&gt;
+&lt;!-- 啟動 Brython --&gt;
+&lt;script&gt;
+window.onload=function(){
+brython(1);
+}
+&lt;/script&gt;
 &lt;div id="con"&gt;&lt;/div&gt;
 &lt;script type="text/python3"&gt;
 from browser import document as do
