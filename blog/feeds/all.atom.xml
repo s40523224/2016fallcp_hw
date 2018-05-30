@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2018-05-30T12:03:00+08:00</updated><entry><title>2018cp漸開線正齒輪輪廓外型3</title><link href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing-3.html" rel="alternate"></link><published>2018-05-30T12:03:00+08:00</published><updated>2018-05-30T12:03:00+08:00</updated><author><name>40523224</name></author><id>tag:None,2018-05-30:./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing-3.html</id><summary type="html">&lt;p&gt;完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖.&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2016Fall CPA 課程網誌 (虎尾科大MDE)</title><link href="./" rel="alternate"></link><link href="./feeds/all.atom.xml" rel="self"></link><id>./</id><updated>2018-05-30T12:03:00+08:00</updated><entry><title>2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖</title><link href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html" rel="alternate"></link><published>2018-05-30T12:03:00+08:00</published><updated>2018-05-30T12:03:00+08:00</updated><author><name>40523224</name></author><id>tag:None,2018-05-30:./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html</id><summary type="html">&lt;p&gt;完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖.&lt;/p&gt;
 &lt;p&gt;設定尺數=48,24&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖.&lt;/p&gt;
 &lt;p&gt;設定尺數=48,24&lt;/p&gt;
@@ -170,7 +170,7 @@ def draw():
     cgo.render(gear1, {'x':cx, 'y':cy, 'scl':reduced_ratio, 'degs':180+(360/n2/2)})
 
 set_interval(draw, 2)
-&lt;/script&gt;</content><category term="使用導引"></category></entry><entry><title>2018cp漸開線正齒輪輪廓外型2</title><link href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing-2.html" rel="alternate"></link><published>2018-05-30T12:02:00+08:00</published><updated>2018-05-30T12:02:00+08:00</updated><author><name>40523224</name></author><id>tag:None,2018-05-30:./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-wai-xing-2.html</id><summary type="html">&lt;p&gt;48齒 與 24齒 的齒輪嚙合靜態圖&lt;/p&gt;
+&lt;/script&gt;</content><category term="使用導引"></category></entry><entry><title>2018cp一組 50t 與 25t 的齒輪嚙合靜態輪廓圖</title><link href="./2018cpyi-zu-50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html" rel="alternate"></link><published>2018-05-30T12:02:00+08:00</published><updated>2018-05-30T12:02:00+08:00</updated><author><name>40523224</name></author><id>tag:None,2018-05-30:./2018cpyi-zu-50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html</id><summary type="html">&lt;p&gt;48齒 與 24齒 的齒輪嚙合靜態圖&lt;/p&gt;
 </summary><content type="html">&lt;p&gt;48齒 與 24齒 的齒輪嚙合靜態圖&lt;/p&gt;
 
 
