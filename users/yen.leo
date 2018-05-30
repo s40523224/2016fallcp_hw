@@ -164,6 +164,9 @@
 <v t="amd.20151215170031.1" a="E"><vh>@path ./../content</vh>
 <v t="amd.20160106093454.1" a="E"><vh>yen 所寫的網誌文章</vh>
 <v t="amd.20160727114506.1" a="E"><vh>201609</vh>
+<v t="leo.20180530102327.1"><vh>@edit 201805303.md</vh></v>
+<v t="leo.20180530102219.1"><vh>@edit 201805302.md</vh></v>
+<v t="leo.20180530094922.1"><vh>@edit 20180530.md</vh></v>
 <v t="amd.20160727120222.1"><vh>@edit 20160921.md</vh></v>
 <v t="leo.20161014142409.1"><vh>@edit 20161014.md</vh></v>
 <v t="leo.20161024160947.1"><vh>@edit 20161024.md</vh></v>
@@ -237,7 +240,7 @@ print("hello")
 <t tx="amd.20161004083800.2">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;    
-2016 Fall 計算機程式課程
+2018 Fall 計算機程式課程
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;
