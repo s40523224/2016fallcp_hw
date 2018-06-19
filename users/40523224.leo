@@ -240,7 +240,7 @@ print("hello")
 <t tx="amd.20161004083800.2">&lt;head&gt;
     &lt;meta charset="utf-8"&gt;
 &lt;title&gt;    
-2018 Fall 計算機程式課程
+2018cd 計算機程式課程
 &lt;/title&gt;
     &lt;meta name="description" content="A framework for easily creating beautiful presentations using HTML"&gt;
     &lt;meta name="author" content="Hakim El Hattab"&gt;

@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖 - 2016Fall CPA 課程網誌 (虎尾科大MDE)</title>
+    <title>2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖 - 2018 cd 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -172,7 +172,7 @@ init_mathjax();
         <meta name="keywords" content="使用導引" />
         <meta name="description" content="完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖. 設定尺數=48,24" />
 
-        <meta property="og:site_name" content="2016Fall CPA 課程網誌 (虎尾科大MDE)" />
+        <meta property="og:site_name" content="2018 cd 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
         <meta property="og:title" content="2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖"/>
         <meta property="og:url" content="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html"/>
@@ -192,7 +192,7 @@ init_mathjax();
     <link rel="stylesheet" href="./theme/css/style.css" type="text/css"/>
 
         <link href="./feeds/all.atom.xml" type="application/atom+xml" rel="alternate"
-              title="2016Fall CPA 課程網誌 (虎尾科大MDE) ATOM Feed"/>
+              title="2018 cd 課程網誌 (虎尾科大MDE) ATOM Feed"/>
 
 <script type="text/javascript" src="http://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shCore.js"></script>
 <script type="text/javascript" src="http://coursemdetw.github.io/project_site_files/files/syntaxhighlighter/shBrushJScript.js"></script>
@@ -254,7 +254,7 @@ init_mathjax();
                 <span class="icon-bar"></span>
             </button>
             <a href="./" class="navbar-brand">
-2016Fall CPA 課程網誌 (虎尾科大MDE)            </a>
+2018 cd 課程網誌 (虎尾科大MDE)            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
@@ -435,7 +435,7 @@ def setgearnumber(e):
         # centre shift to make backlash
         dC = bklsh/(2*math.tan(math.pi*pa/180))
         # np 為小齒輪齒數
-        np = 24
+        np = 25
         # gear ratio
         gr = n/np              
         gearConfig = {'cx':-pr, 'cy':0, 'degs':[0, 360]}
@@ -544,8 +544,8 @@ brython({debug:1, pythonpath:['./../data/py']});
 
 <div id="cango_gear_div" width="800" height="20"></div>
 
-<p><input id="na" value="50"></input><br>
-<input id="nb" value="25"></input><br>
+<p><input id="na" value="48"></input><br>
+<input id="nb" value="24"></input><br>
 <button id="button_d">Set Number of Gears</button></p>
 <script type="text/python">
 # 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
@@ -805,7 +805,7 @@ doc['button_d'].bind('click',setgearnumber)
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2018 KMOL
+         <div class="col-xs-10">&copy; 2018 40523224
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
