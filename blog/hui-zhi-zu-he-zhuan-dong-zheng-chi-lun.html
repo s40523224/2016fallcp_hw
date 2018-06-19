@@ -2,7 +2,7 @@
 <html lang="en"
 >
 <head>
-    <title>2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖 - 2018 cd 課程網誌 (虎尾科大MDE)</title>
+    <title>繪製組合轉動正齒輪 - 2018 cd 課程網誌 (虎尾科大MDE)</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -166,20 +166,19 @@ init_mathjax = function() {
 init_mathjax();
 </script>
 
-<link rel="canonical" href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html">
+<link rel="canonical" href="./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html">
 
         <meta name="author" content="40523224" />
-        <meta name="keywords" content="使用導引" />
-        <meta name="description" content="完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖. 設定尺數=48,24" />
+        <meta name="keywords" content="繪製組合轉動正齒輪" />
 
         <meta property="og:site_name" content="2018 cd 課程網誌 (虎尾科大MDE)" />
         <meta property="og:type" content="article"/>
-        <meta property="og:title" content="2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖"/>
-        <meta property="og:url" content="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html"/>
-        <meta property="og:description" content="完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖. 設定尺數=48,24"/>
+        <meta property="og:title" content="繪製組合轉動正齒輪"/>
+        <meta property="og:url" content="./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html"/>
+        <meta property="og:description" content=""/>
         <meta property="article:published_time" content="2018-05-30" />
-            <meta property="article:section" content="Misc" />
-            <meta property="article:tag" content="使用導引" />
+            <meta property="article:section" content="Course" />
+            <meta property="article:tag" content="繪製組合轉動正齒輪" />
             <meta property="article:author" content="40523224" />
 
 
@@ -259,6 +258,9 @@ init_mathjax();
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li class="active">
+                            <a href="./category/course.html">Course</a>
+                        </li>
+                        <li >
                             <a href="./category/misc.html">Misc</a>
                         </li>
             </ul>
@@ -284,10 +286,10 @@ init_mathjax();
         <article>
             <header class="page-header">
                 <h1>
-                    <a href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html"
+                    <a href="./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html"
                        rel="bookmark"
-                       title="Permalink to 2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖">
-                        2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖
+                       title="Permalink to 繪製組合轉動正齒輪">
+                        繪製組合轉動正齒輪
                     </a>
                 </h1>
             </header>
@@ -305,13 +307,11 @@ init_mathjax();
 
 
 <span class="label label-default">Tags</span>
-	<a href="./tag/shi-yong-dao-yin.html">使用導引</a>
+	<a href="./tag/hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html">繪製組合轉動正齒輪</a>
     
 </footer><!-- /.post-info -->                    </div>
                 </div>
-                <p>完成兩齒嚙合靜態繪圖後, 請嘗試轉為動態繪圖.</p>
-<p>設定尺數=48,24</p>
-
+                <!-- PELICAN_END_SUMMARY -->
 
 <!-- 導入 Brython 標準程式庫 -->
 
@@ -385,12 +385,12 @@ def setgearnumber(e):
     if doc["na"].value.isdigit():
         n = int(doc["na"].value)
     else:
-        n = 48
+        n = 50
 
     if doc["nb"].value.isdigit():
         n2 = int(doc["nb"].value)
     else:
-        n2 = 24
+        n2 = 25
     def cangoGear(n, m, pa):
         # n 為齒數
         # m 為模數, 根據畫布的寬度, 計算適合的模數大小
@@ -544,8 +544,8 @@ brython({debug:1, pythonpath:['./../data/py']});
 
 <div id="cango_gear_div" width="800" height="20"></div>
 
-<p><input id="na" value="48"></input><br>
-<input id="nb" value="24"></input><br>
+<p><input id="na" value="50"></input><br>
+<input id="nb" value="25"></input><br>
 <button id="button_d">Set Number of Gears</button></p>
 <script type="text/python">
 # 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
@@ -730,13 +730,13 @@ doc['button_d'].bind('click',setgearnumber)
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Recent Posts</span></h4>
                 <ul class="list-group" id="recentposts">
                     <li class="list-group-item">
-                        <a href="./2018cpjian-kai-xian-zheng-chi-lun-lun-kuo-chang-shi-zhuan-wei-dong-tai-hui-tu.html">
-                            2018cp漸開線正齒輪輪廓嘗試轉為動態繪圖
+                        <a href="./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html">
+                            繪製組合轉動正齒輪
                         </a>
                     </li>
                     <li class="list-group-item">
-                        <a href="./2018cpyi-zu-50t-yu-25t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">
-                            2018cp一組 50t 與 25t 的齒輪嚙合靜態輪廓圖
+                        <a href="./2018cpyi-zu-48t-yu-24t-de-chi-lun-nie-he-jing-tai-lun-kuo-tu.html">
+                            2018cp一組 48t 與 24t 的齒輪嚙合靜態輪廓圖
                         </a>
                     </li>
                     <li class="list-group-item">
@@ -759,6 +759,11 @@ doc['button_d'].bind('click',setgearnumber)
 
             <li class="list-group-item"><a href="./categories.html"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Categories</span></h4></a>
                 <ul class="list-group" id="categories">
+                    <li class="list-group-item">
+                        <a href="./category/course.html">
+                            <i class="fa fa-folder-open fa-lg"></i> Course
+                        </a>
+                    </li>
                     <li class="list-group-item">
                         <a href="./category/misc.html">
                             <i class="fa fa-folder-open fa-lg"></i> Misc

@@ -1,37 +1,41 @@
-Title: 繪製組合轉動正齒輪
-Date: 2018-05-30 12:03
-Category: Course
-Tags: 繪製組合轉動正齒輪
-Author: 40523224
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>2018 cd 課程網誌 (虎尾科大MDE) - Course</title><link href="./" rel="alternate"></link><link href="./feeds/course.atom.xml" rel="self"></link><id>./</id><updated>2018-05-30T12:03:00+08:00</updated><entry><title>繪製組合轉動正齒輪</title><link href="./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html" rel="alternate"></link><published>2018-05-30T12:03:00+08:00</published><updated>2018-05-30T12:03:00+08:00</updated><author><name>40523224</name></author><id>tag:None,2018-05-30:./hui-zhi-zu-he-zhuan-dong-zheng-chi-lun.html</id><summary type="html"></summary><content type="html">&lt;!-- PELICAN_END_SUMMARY --&gt;
 
-<!-- PELICAN_END_SUMMARY -->
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
 
-<!-- 導入 Brython 標準程式庫 -->
-<script src="../data/Brython-3.3.1/brython.js"></script>
-<script src="../data/Brython-3.3.1/brython_stdlib.js"></script>
- 
-<!-- 啟動 Brython -->
-<script>
+&lt;script src="../data/Brython-3.3.1/brython.js"&gt;&lt;/script&gt;
+
+&lt;script src="../data/Brython-3.3.1/brython_stdlib.js"&gt;&lt;/script&gt;
+
+&lt;!-- 啟動 Brython --&gt;
+
+&lt;script&gt;
 window.onload=function()
 {
 brython({debug:1, pythonpath:['./../data/py']});
 }
-</script>
- 
-<!-- Cango 程式庫 -->
-<script type="text/javascript" src="./../data/cango/Cango-9v05-min.js"></script>
-<script type="text/javascript" src="./../data/cango/CangoAxes-2v09.js"></script>
-<script type="text/javascript" src="./../data/cango/CangoAnimation-5v00.js"></script>
-<script type="text/javascript" src="./../data/cango/gearUtils-05.js"></script>
-<canvas id='cango_gear' width='800' height='700'></canvas>
+&lt;/script&gt;
 
-<!-- 以下製作 button-->
-<div id="cango_gear_div" width="800" height="20"></div>
-<input id="na" value="50"></input><br>
-<input id="nb" value="25"></input><br>
-<button id="button_d">Set Number of Gears</button>
+&lt;!-- Cango 程式庫 --&gt;
 
-<script type="text/python">
+&lt;script type="text/javascript" src="./../data/cango/Cango-9v05-min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/CangoAxes-2v09.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/CangoAnimation-5v00.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/gearUtils-05.js"&gt;&lt;/script&gt;
+
+&lt;canvas id='cango_gear' width='800' height='700'&gt;&lt;/canvas&gt;
+
+&lt;!-- 以下製作 button--&gt;
+
+&lt;div id="cango_gear_div" width="800" height="20"&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;input id="na" value="50"&gt;&lt;/input&gt;&lt;br&gt;
+&lt;input id="nb" value="25"&gt;&lt;/input&gt;&lt;br&gt;
+&lt;button id="button_d"&gt;Set Number of Gears&lt;/button&gt;&lt;/p&gt;
+&lt;script type="text/python"&gt;
 # 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
 from browser import document as doc
 # 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
@@ -96,7 +100,7 @@ def setgearnumber(e):
         gear = gearTooth.dup()
         # gear 為單一齒的輪廓資料
         #cgo.render(gearTooth)
-     
+
         # 利用單齒輪廓旋轉, 產生整個正齒輪外形
         for i in range(1, n):
             # 將 gearTooth 中的資料複製到 newTooth
@@ -105,14 +109,14 @@ def setgearnumber(e):
             newTooth.rotate(360*i/n)
             # appendPath 為 Cango 程式庫中的方法, 第二個變數為 True, 表示要刪除最前頭的 Move to SVG Path 標註符號
             gear.appendPath(newTooth, True) # trim move command = True
-     
+
         # 建立軸孔
         # add axle hole, hr 為 hole radius
         hr = 0.6*pr # diameter of gear shaft
         shaft = path(shapedefs.circle(hr))
         shaft.revWinding()
         gear.appendPath(shaft) # retain the 'moveTo' command for shaft sub path
-    
+
         # setup the animation
         # backlash (mm)
         bklsh = 0.04*m
@@ -138,7 +142,7 @@ def setgearnumber(e):
     pr = n*m/2
     # n2 齒輪的節圓半徑
     pr2 = n2*m/2
-    
+
     from time import time
     from browser.timer import request_animation_frame as raf
     from browser.timer import set_interval
@@ -196,38 +200,42 @@ def setgearnumber(e):
 
 setgearnumber(True)
 doc['button_d'].bind('click',setgearnumber)
-</script>
+&lt;/script&gt;
 
+&lt;h4&gt;程式碼如下:&lt;/h4&gt;
+&lt;p&gt;&lt;pre class="brush: python"&gt;
+&lt;!-- 導入 Brython 標準程式庫 --&gt;
+&lt;script src="../data/Brython-3.3.1/brython.js"&gt;&lt;/script&gt;
+&lt;script src="../data/Brython-3.3.1/brython_stdlib.js"&gt;&lt;/script&gt;&lt;/p&gt;
+&lt;!-- 啟動 Brython --&gt;
 
-
-####程式碼如下:
-<pre class="brush: python">
-<!-- 導入 Brython 標準程式庫 -->
-<script src="../data/Brython-3.3.1/brython.js"></script>
-<script src="../data/Brython-3.3.1/brython_stdlib.js"></script>
- 
-<!-- 啟動 Brython -->
-<script>
+&lt;script&gt;
 window.onload=function()
 {
 brython({debug:1, pythonpath:['./../data/py']});
 }
-</script>
- 
-<!-- Cango 程式庫 -->
-<script type="text/javascript" src="./../data/cango/Cango-9v05-min.js"></script>
-<script type="text/javascript" src="./../data/cango/CangoAxes-2v09.js"></script>
-<script type="text/javascript" src="./../data/cango/CangoAnimation-5v00.js"></script>
-<script type="text/javascript" src="./../data/cango/gearUtils-05.js"></script>
-<canvas id='cango_gear' width='800' height='700'></canvas>
+&lt;/script&gt;
 
-<!-- 以下製作 button-->
-<div id="cango_gear_div" width="800" height="20"></div>
-<input id="na" value="50"></input><br>
-<input id="nb" value="25"></input><br>
-<button id="button_d">Set Number of Gears</button>
+&lt;!-- Cango 程式庫 --&gt;
 
-<script type="text/python">
+&lt;script type="text/javascript" src="./../data/cango/Cango-9v05-min.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/CangoAxes-2v09.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/CangoAnimation-5v00.js"&gt;&lt;/script&gt;
+
+&lt;script type="text/javascript" src="./../data/cango/gearUtils-05.js"&gt;&lt;/script&gt;
+
+&lt;canvas id='cango_gear' width='800' height='700'&gt;&lt;/canvas&gt;
+
+&lt;!-- 以下製作 button--&gt;
+
+&lt;div id="cango_gear_div" width="800" height="20"&gt;&lt;/div&gt;
+
+&lt;p&gt;&lt;input id="na" value="50"&gt;&lt;/input&gt;&lt;br&gt;
+&lt;input id="nb" value="25"&gt;&lt;/input&gt;&lt;br&gt;
+&lt;button id="button_d"&gt;Set Number of Gears&lt;/button&gt;&lt;/p&gt;
+&lt;script type="text/python"&gt;
 # 將 導入的 document 設為 doc 主要原因在於與舊程式碼相容
 from browser import document as doc
 # 由於 Python3 與 Javascript 程式碼已經不再混用, 因此來自 Javascript 的變數, 必須居中透過 window 物件轉換
@@ -292,7 +300,7 @@ def setgearnumber(e):
         gear = gearTooth.dup()
         # gear 為單一齒的輪廓資料
         #cgo.render(gearTooth)
-     
+
         # 利用單齒輪廓旋轉, 產生整個正齒輪外形
         for i in range(1, n):
             # 將 gearTooth 中的資料複製到 newTooth
@@ -301,14 +309,14 @@ def setgearnumber(e):
             newTooth.rotate(360*i/n)
             # appendPath 為 Cango 程式庫中的方法, 第二個變數為 True, 表示要刪除最前頭的 Move to SVG Path 標註符號
             gear.appendPath(newTooth, True) # trim move command = True
-     
+
         # 建立軸孔
         # add axle hole, hr 為 hole radius
         hr = 0.6*pr # diameter of gear shaft
         shaft = path(shapedefs.circle(hr))
         shaft.revWinding()
         gear.appendPath(shaft) # retain the 'moveTo' command for shaft sub path
-    
+
         # setup the animation
         # backlash (mm)
         bklsh = 0.04*m
@@ -334,7 +342,7 @@ def setgearnumber(e):
     pr = n*m/2
     # n2 齒輪的節圓半徑
     pr2 = n2*m/2
-    
+
     from time import time
     from browser.timer import request_animation_frame as raf
     from browser.timer import set_interval
@@ -392,8 +400,6 @@ def setgearnumber(e):
 
 setgearnumber(True)
 doc['button_d'].bind('click',setgearnumber)
-</script>
+&lt;/script&gt;
 
-
-</pre>
-
+&lt;/pre&gt;</content><category term="繪製組合轉動正齒輪"></category></entry></feed>
